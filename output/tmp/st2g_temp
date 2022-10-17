@@ -1,0 +1,10 @@
+// Default Behaviour Graph
+digraph {
+	0 [label="/usr/bin/wget" xlabel=LinuxFilepath]
+	1 [label="/bin/bash" xlabel=LinuxFilepath]
+	2 [label="162.125.6.6" xlabel=IP]
+	3 [label="sysrep_exp_data.txt" xlabel=Filename]
+	1 -> 0 [label=start xlabel="[0]"]
+	0 -> 2 [label=download xlabel="[1]"]
+	0 -> 3 [label=write xlabel="[2]"]
+}

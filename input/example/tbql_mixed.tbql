@@ -1,0 +1,6 @@
+at "10/06/2019"
+proc p1['%/bin/bash%'] ~>(1~3)[start] proc p2['%/usr/bin/wget%'] as evt1 // variable length path to cypher
+proc p2['%/usr/bin/wget%'] ->[read] ip i1['162.125.6.6'] as evt2 // length-1 to cypher
+proc p2['%/usr/bin/wget%'] write file f1['%sysrep_exp_data.txt%'] as evt3 // length-1 to sql
+with evt1 before evt2, evt2 before evt3
+return distinct p1, p2, i1, f1

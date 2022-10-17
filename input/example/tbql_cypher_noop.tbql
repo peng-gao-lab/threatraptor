@@ -1,0 +1,6 @@
+at "10/06/2019"
+proc p1['%/bin/bash%'] ~>(1~3) proc p2['%/usr/bin/wget%'] as evt1
+proc p2['%/usr/bin/wget%'] ~>(1~3) ip i1['162.125.6.6'] as evt2
+proc p2['%/usr/bin/wget%'] ~>(1~3) file f1['%sysrep_exp_data.txt%'] as evt3
+with evt1 before evt2, evt2 before evt3
+return distinct p1, p2, i1, f1
