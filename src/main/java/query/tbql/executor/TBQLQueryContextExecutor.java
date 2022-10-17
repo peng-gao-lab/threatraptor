@@ -19,7 +19,6 @@ import query.tbql.executor.dbadaptor.PostgresDBProperties;
 import query.tbql.executor.handler.TBQLExecutorErrorHandler;
 import query.tbql.executor.handler.TBQLExecutorResultHandler;
 
-// Key class that implements Comparator<>
 class Key implements Comparable<Key> { // define a natural order
 	private long id;
 	private String hostName;
@@ -39,7 +38,6 @@ class Key implements Comparable<Key> { // define a natural order
 		return hostName;
 	}
 
-	// Overriding the compareTo method
 	public int compareTo(Key k) {
 		if (this.id < k.getID()) {
 			return -1;
@@ -277,7 +275,6 @@ public class TBQLQueryContextExecutor {
 		}
 		Set<String> eventIDForExecutedContexts = new TreeSet<>(); // set of event IDs of executed contexts
 		HashMap<String, ArrayList<ArrayList<Key>>> tmpResults = new HashMap<>(); // 1\t2\t3\t -> list of key tuples
-		
 		
 		// For each evtRel
 		for (TBQLEventRelationConstraint evtRel : evtRels) {

@@ -42,18 +42,6 @@ public interface TBQLParserListener extends ParseTreeListener {
 	 */
 	void exitTimeWindowGlobalConstraint(TBQLParser.TimeWindowGlobalConstraintContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code FunctionCallGlobalConstraint}
-	 * labeled alternative in {@link TBQLParser#globalConstraint}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionCallGlobalConstraint(TBQLParser.FunctionCallGlobalConstraintContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code FunctionCallGlobalConstraint}
-	 * labeled alternative in {@link TBQLParser#globalConstraint}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionCallGlobalConstraint(TBQLParser.FunctionCallGlobalConstraintContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code AtTimeConstraint}
 	 * labeled alternative in {@link TBQLParser#timeWindowConstraint}.
 	 * @param ctx the parse tree

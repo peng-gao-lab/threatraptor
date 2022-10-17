@@ -27,7 +27,7 @@ public class TBQLQueryContext {
 	// Global constraints
 	ArrayList<TBQLEventConstraint> globalConstraints; // <id, eq, val> or <id, op, collection> or <timewindow, eq, timeKey, timeVal, starttime, endtime>
 	
-	// Subquery
+	// Results
 	ArrayList<String> queryTableResults; // table results of this query
 	
 	// Find the TBQLEventContext object that corresponds to id
@@ -87,7 +87,6 @@ public class TBQLQueryContext {
 		default:
 			throw new RuntimeException("Undefined type: " + type);
 		}
-		
 		return defaultAttribute;
 	}
 }

@@ -17,7 +17,6 @@ globalConstraint
 :
 	key=ID (not=NOTSTR)? op=(EQUAL|UNEQUAL|GT|LT|GEQ|LEQ|IN) (val=(INT|FLOAT|STRING) | coll=collection)						# AttributeGlobalConstraint // agentid = 1; agentid in (1, 2, 3)
 	| tcons=timeWindowConstraint																							# TimeWindowGlobalConstraint
-	| key=ID op=EQUAL func=ID LEFTBRACKET (args+=(ID|INT|FLOAT|STRING) (COMMA args+=(ID|INT|FLOAT|STRING))*)? RIGHTBRACKET	# FunctionCallGlobalConstraint
 ;
 
 timeWindowConstraint

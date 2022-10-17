@@ -52,18 +52,6 @@ public class TBQLParserBaseListener implements TBQLParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionCallGlobalConstraint(TBQLParser.FunctionCallGlobalConstraintContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFunctionCallGlobalConstraint(TBQLParser.FunctionCallGlobalConstraintContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterAtTimeConstraint(TBQLParser.AtTimeConstraintContext ctx) { }
 	/**
 	 * {@inheritDoc}

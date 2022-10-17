@@ -31,13 +31,6 @@ public interface TBQLParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitTimeWindowGlobalConstraint(TBQLParser.TimeWindowGlobalConstraintContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code FunctionCallGlobalConstraint}
-	 * labeled alternative in {@link TBQLParser#globalConstraint}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunctionCallGlobalConstraint(TBQLParser.FunctionCallGlobalConstraintContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code AtTimeConstraint}
 	 * labeled alternative in {@link TBQLParser#timeWindowConstraint}.
 	 * @param ctx the parse tree

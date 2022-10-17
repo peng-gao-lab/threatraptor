@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ST2G {
     private static ST2G instance = new ST2G(); // singleton
-    private static boolean use_WSL = false;
+    private static boolean use_WSL = false; // for windows
     public static String temp_output_loc;
     private ST2G() {
         temp_output_loc = "output/tmp/st2g_temp";
@@ -19,7 +19,7 @@ public class ST2G {
         // "st2g --input %s --output %s"
         List<String> cmds = new ArrayList<>();
         String st2gCmdStr = "";
-        if (use_WSL) { // windows
+        if (use_WSL) {
             cmds.add("bash");
             // cmds.add("sh");
             cmds.add("-lic");

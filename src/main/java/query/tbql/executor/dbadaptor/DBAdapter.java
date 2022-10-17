@@ -11,7 +11,7 @@ import query.tbql.executor.constraint.AttributeConstraint;
 public class DBAdapter {
 
 	public static String getSQLAttributeConstraintStr(AttributeConstraint attributeConstraint, String eventID) {
-		// Compile the BQL-style attribute constraint to SQL-style attribute constraint
+		// Compile the TBQL-style attribute constraint to SQL-style attribute constraint
 
 		String id = attributeConstraint.getId();
 		String op = attributeConstraint.getOp(); // =, >, <, >=, <=, !=, in, not in
